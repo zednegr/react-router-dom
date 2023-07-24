@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import "./img.scss"
 
 function Img() {
 
@@ -15,24 +16,30 @@ function Img() {
     }, [])
 
     if (loading) {
-       return <h1>Loading...</h1>
+        return <h1>Loading...</h1>
     }
 
     console.log(getData);
     return (
 
-        <> 
+        <div className="cards">
             {
                 getData.map(item => {
                     return (
                         <>
-                        <img src={item?.urls?.small} width={'200px'} height={'200px'} alt="" />
-                        <a href={item?.links?.download} >Download</a>
+                            <div className="card">
+                                <div className="card-top">
+                                    <img src={item?.urls?.small} width={'200px'} height={'200px'} alt="" />
+                                </div>
+                                <div className="card-middle">
+                                    <a href={item?.links?.download} >Download</a>
+                                </div>
+                            </div>
                         </>
                     )
                 })
             }
-        </>
+        </div>
     )
 }
 
