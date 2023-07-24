@@ -1,3 +1,5 @@
+import Img from "../components/imgs/img"
+
 function Home() {
 
     return (
@@ -7,7 +9,7 @@ function Home() {
                 <div className="container">
                     <div className="content">
                         <h1>Home</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, delectus!</p>
+                        <Img />
                     </div>
                 </div>
             </div>
