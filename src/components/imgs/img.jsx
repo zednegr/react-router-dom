@@ -7,7 +7,7 @@ function Img() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('https://api.unsplash.com/photos/?client_id=NjXfY5kc8FvYvy8vqWB4pFHwwCQR17TtmkQj9AEiksY')
+        fetch('https://dog.ceo/api/breeds/image/random')
             .then((res) => res.json())
             .then((data) => setgetData(data))
             .finally(() => {
@@ -24,20 +24,17 @@ function Img() {
 
         <div className="cards">
             {
-                getData.map(item => {
-                    return (
                         <>
                             <div className="card">
                                 <div className="card-top">
-                                    <img src={item?.urls?.small} width={'200px'} height={'200px'} alt="" />
+                                    <img src={getData?.message} width={'200px'} height={'200px'} alt="" />
                                 </div>
                                 <div className="card-middle">
-                                    <a href={item?.links?.download} >Download</a>
+                                    <a href="">Download</a>
                                 </div>
                             </div>
                         </>
-                    )
-                })
+              
             }
         </div>
     )
