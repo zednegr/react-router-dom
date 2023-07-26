@@ -7,7 +7,6 @@ function Header() {
 
         <>
             <section className="header-section">
-                <div className="container">
                     <nav>
                         <ul className="nav_list">
                             <NavLink to={"/"} className="nav_li">Home</NavLink>
@@ -15,7 +14,6 @@ function Header() {
                             <NavLink to={"/contact"} className="nav_li">Contact</NavLink>
                         </ul>
                     </nav>
-                </div>
 
             </section>
         </>

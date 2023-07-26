@@ -22,21 +22,25 @@ function Img() {
     console.log(getData);
     return (
 
-        <div className="cards">
-            {
-                        <>
-                            <div className="card">
-                                <div className="card-top">
-                                    <img src={getData?.message} width={'200px'} height={'200px'} alt="" />
-                                </div>
-                                <div className="card-middle">
-                                    <a href="">Download</a>
-                                </div>
+        <section>
+            <div className="cards">
+                {
+                    <>
+                        <div className="card">
+                            <div className="card-top">
+                                <img className="cat-img" src={getData?.message} width={'200px'} height={'200px'} alt="" />
                             </div>
-                        </>
-              
-            }
-        </div>
+                            <div className="card-about">
+                                <p className="card-about-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, delectus!</p>
+                            </div>
+                            <div className="card-middle">
+                                <a className="next-btn" href="#">Next</a>
+                            </div>
+                        </div>
+                    </>
+                }
+            </div>
+        </section>
     )
 }
 

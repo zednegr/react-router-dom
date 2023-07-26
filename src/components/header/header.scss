@@ -1,10 +1,29 @@
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 20px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 50px;
 }
 
 .nav_list {
     display: flex;
     gap: 50px;
+}
 
+.nav_li {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+   
+
+    &:hover {
+        color: hsl(114, 96.1%, 59.6%);
+    }
 }

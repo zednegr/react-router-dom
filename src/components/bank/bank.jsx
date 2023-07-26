@@ -15,7 +15,7 @@ function Bank() {
             )
     }, [])
 
-    if(loading) {
+    if (loading) {
         return <h1>Loading</h1>
     }
 
@@ -24,18 +24,22 @@ function Bank() {
         <>
             <div className="section">
                 <div className="conatainer">
-                    {
-                        data?.map((item) => {
-                            console.log(item);
-                           return(
-                            <div className="card">
-                            <div className="card-top">
-                                <img src={item?.url}  />
-                            </div>
-                        </div>
-                           )
-                        })
-                    }
+                    <div className="cards">
+
+
+                        {
+                            data?.map((item) => {
+                                
+                                return (
+                                    <div className="card">
+                                        <div className="card-top">
+                                            <img className="cat-img" src={item?.url} />
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </>
