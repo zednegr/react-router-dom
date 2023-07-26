@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react"
 import "./img.scss"
+import { useState, useEffect } from "react"
+import Loading from "../loading/loading"
+import Error from "../error/error"
 
 function Img() {
 
     const [getData, setgetData] = useState([])
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         fetch('https://dog.ceo/api/breeds/image/random')
@@ -13,10 +16,17 @@ function Img() {
             .finally(() => {
                 setLoading(false)
             })
+            .catch(() => {
+                setError(true)
+            })
     }, [])
 
     if (loading) {
-        return <h1>Loading...</h1>
+        return <Loading />
+    }
+
+    if (error) {
+        return <Error />
     }
 
     console.log(getData);
@@ -34,7 +44,7 @@ function Img() {
                                 <p className="card-about-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, delectus!</p>
                             </div>
                             <div className="card-middle">
-                                <a className="next-btn" href="#">Next</a>
+                                <a className="next-btn btn-slide" href="#">Next</a>
                             </div>
                         </div>
                     </>

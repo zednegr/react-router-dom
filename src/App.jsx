@@ -22,8 +22,6 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
-      <Error />
-
     </>
   )
 }
