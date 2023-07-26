@@ -24,14 +24,13 @@ function Bank() {
     if (loading) {
         return <Loading />
     }
-    
+
     if (error) {
         return <Error />
     }
 
     return (
 
-        <>
             <div className="section">
                 <div className="conatainer">
                     <div className="cards">
@@ -55,7 +54,6 @@ function Bank() {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 

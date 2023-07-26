@@ -5,7 +5,6 @@ function Header() {
 
     return (
 
-        <>
             <section className="header-section">
                     <nav>
                         <ul className="nav_list">
@@ -16,7 +15,6 @@ function Header() {
                     </nav>
 
             </section>
-        </>
     )
 }
 

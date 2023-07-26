@@ -35,7 +35,6 @@ function Img() {
         <section>
             <div className="cards">
                 {
-                    <>
                         <div className="card">
                             <div className="card-top">
                                 <img className="cat-img" src={getData?.message} width={'200px'} height={'200px'} alt="" />
@@ -47,7 +46,6 @@ function Img() {
                                 <a className="next-btn btn-slide" href="#">Next</a>
                             </div>
                         </div>
-                    </>
                 }
             </div>
         </section>

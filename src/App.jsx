@@ -4,7 +4,6 @@ import Header from './components/header/header'
 import Home from './pages/home'
 import Contact from './pages/contact'
 import About from './pages/about'
-import Error from './components/error/error'
 
 function App() {
 
@@ -14,6 +13,7 @@ function App() {
       <BrowserRouter>
 
         <Header />
+
         <div className="container">
           <Routes>
             <Route path='/' element={<Home />} />
