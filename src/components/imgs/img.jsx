@@ -43,7 +43,7 @@ function Img() {
                                 <p className="card-about-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, delectus!</p>
                             </div>
                             <div className="card-middle">
-                                <a className="next-btn btn-slide" href="#">Next</a>
+                                <a className="next-btn btn-slide" href="">Next</a>
                             </div>
                         </div>
                 }
